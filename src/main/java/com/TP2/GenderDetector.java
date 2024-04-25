@@ -34,9 +34,9 @@ public class GenderDetector {
             JsonObject jsonObject = JsonParser.parseString(response.toString()).getAsJsonObject();
             String gender = jsonObject.get("gender").getAsString();
 
-            if (gender == "female") {
+            if (gender.equals("female")) {
                 return "Feminino";
-            }else if (gender == "male") {
+            }else if (gender.equals("male")) {
                 return "Masculino";
             }else{
                 return "Neutro";

@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 public class PessoaReader {
+    
     public static LinkedList readPessoas(String fileName) throws Exception {
         LinkedList listaPessoas = new LinkedList();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");

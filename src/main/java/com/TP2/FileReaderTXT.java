@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileReaderTXT {
+    
     public static List<String> readLines(String fileName) throws IOException {
         List<String> lines = new ArrayList<>();
         FileInputStream fileInputStream = new FileInputStream(fileName);
