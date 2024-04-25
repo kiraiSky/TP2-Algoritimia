@@ -1,4 +1,4 @@
-package com.example;
+package com.TP2;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
