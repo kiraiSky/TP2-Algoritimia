@@ -1,23 +1,25 @@
 package com.TP2;
 
-import java.util.Date;
 import java.text.Normalizer;
+import java.time.LocalDate;
 
 public class Pessoa {
     private static String apiKey = "dedc56402da5c9115c366b579a9e900e5350a33dc71d7a3920bbd88321910cf8";
     private String nome;
     private String nomeNormalizado;
-    private Date dataNascimento;
+
+    private LocalDate dataNascimento;
     private int numeroIdentificacao;
     private String gender;
 
     // Construtor
-    public Pessoa(String nome, Date dataNascimento, int numeroIdentificacao) {
+    public Pessoa(String nome, LocalDate dataNascimento, int numeroIdentificacao) {
         this.nome = nome;
         this.nomeNormalizado = stripAccents(nome);
         this.dataNascimento = dataNascimento;
         this.numeroIdentificacao = numeroIdentificacao;
         this.gender = GenderDetector.detectGender(this.nomeNormalizado.split(" ")[0], apiKey);
+        // this.gender = "Masculino";
     }
 
     public static String stripAccents(String nome) {
@@ -51,11 +53,11 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
