@@ -73,4 +73,8 @@ public class LinkedList {
         }
         prev.setNext(current.getNext());
     }
+
+    public Node getHead() {
+        return head;
+    }
 }
